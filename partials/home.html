@@ -1,0 +1,24 @@
+<div class="actionBox">
+   <form class="form-inline" role="form" ng-submit="addSuggestion()">
+       <div class="form-group">
+           <input class="form-control" type="text" placeholder="The next big thing!" ng-model="title" />
+       </div>
+       <div class="form-group">
+           <button class="btn btn-default" type="submit">Share</button>
+       </div>
+   </form>
+</div>
+
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="post in posts | orderBy:'-votes'">
+        <div class="vote pull-left v-align">
+            <span class="glyphicon glyphicon-arrow-up gi-2x" ng-click="upVote(post)"></span>
+            <span class="glyphicon glyphicon-arrow-down gi-2x" ng-click="downVote(post)"></span>
+            <h3><span class="label pull-right">{{ post.votes | number }}</span></h3>
+        </div>
+        <div class="suggestion-body">
+            <h3>{{ post.title }}</h3>
+            <h4><span class="label"><a href="#/suggestion/{{ post.id }}">{{ post.comments.length }} Comments</a></span></h4>
+        </div>
+    </li>
+</ul>

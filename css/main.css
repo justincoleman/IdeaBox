@@ -1,0 +1,129 @@
+body {
+    background: #fbfbfb;
+}
+.list-group .list-group-item {
+    padding-left: 0;
+    min-height: 90px;
+    border-color: #eee;
+    margin: 15px 0;
+}
+.list-group .vote {
+    text-align: center;
+    border-right: 1px solid #eee;
+    height: 100%;
+    background: #DADADB;
+    padding: 33px 15px 10px;
+    width: 110px;
+    color: #fff;
+}
+.list-group .vote .label {
+    background: #99BEEB;
+}
+.list-group .vote .glyphicon {
+    position: absolute;
+    left: 10px;
+}
+.list-group .vote .glyphicon:first-child {
+    top: 15px;
+}
+.list-group .vote .glyphicon:first-child:hover {
+    color: #F3723F;
+}
+.list-group .vote .glyphicon:nth-child(2) {
+    top: 50px;
+}
+.list-group .vote .glyphicon:nth-child(2):hover {
+    color: #3F96F3;
+}
+.list-group .vote .glyphicon:hover {
+    cursor: pointer;
+}
+
+.list-group .suggestion-body {
+    padding-left: 130px;
+    padding-top: 7px;
+    color: #262626;
+}
+.list-group .suggestion-body .label {
+    background: #F3723F;
+}
+.list-group h3 {
+    margin-top: 0;
+}
+.label a, .label a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+/*COMMENTS SECTION/FORM */
+.commentBox {
+    padding:10px;
+    border-top:1px dotted #bbb;
+}
+.commentBox .form-group:first-child, .actionBox .form-group:first-child {
+    width:87%;
+}
+.commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
+    width:12%;
+}
+.actionBox .form-group * {
+    width:100%;
+}
+.taskDescription {
+    margin-top:10px 0;
+}
+.commentList {
+    padding:0;
+    list-style:none;
+    max-height:400px;
+    overflow:auto;
+}
+.commentList li {
+    margin:0;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+.commentList li:nth-child(even) {
+    background: #fbfbfb;
+    background: -moz-linear-gradient(left, #fbfbfb 0%, #f7f7f7 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #fbfbfb), color-stop(100%, #f7f7f7));
+    background: -webkit-linear-gradient(left, #fbfbfb 0%, #f7f7f7 100%);
+    background: -o-linear-gradient(left, #fbfbfb 0%, #f7f7f7 100%);
+    background: -ms-linear-gradient(left, #fbfbfb 0%, #f7f7f7 100%);
+    background: linear-gradient(to right, #fbfbfb 0%, #f7f7f7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfb', endColorstr='#f7f7f7', GradientType=1 );
+}
+.commentList li > div {
+    display:table-cell;
+}
+.commentVote {
+    width:60px;
+    margin-right:15px;
+    height:100%;
+    float:left;
+    border-right: 1px solid #eee;
+}
+.commentVote span:hover {
+    cursor: pointer;
+    color: #F3723F;
+}
+.commentText p {
+    margin:0;
+}
+
+.v-align {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.gi-2x{font-size: 2em;}
+.gi-3x{font-size: 3em;}
+.gi-4x{font-size: 4em;}
+.gi-5x{font-size: 5em;}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1000px;
+    }
+}

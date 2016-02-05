@@ -1,0 +1,44 @@
+<ol class="breadcrumb">
+  <li><a href="#/">Back</a></li>
+  <li class="active">Idea #{{ post.id+1 }}</li>
+</ol>
+
+
+<ul class="list-group">
+    <li class="list-group-item">
+        <div class="vote pull-left v-align">
+            <span class="glyphicon glyphicon-arrow-up gi-2x" ng-click="upVote(post)"></span>
+            <span class="glyphicon glyphicon-arrow-down gi-2x" ng-click="downVote(post)"></span>
+            <h3><span class="label pull-right">{{ post.votes | number }}</span></h3>
+        </div>
+        <div class="suggestion-body">
+            <h3 class="v-align">{{ post.title }}</h3>
+        </div>
+    </li>
+</ul>
+
+<hr>
+
+<h4>Comments</h4>
+
+<div class="actionBox">
+   <ul class="commentList">
+       <li ng-repeat="comment in post.comments">
+           <div class="commentVote">
+                <span class="glyphicon glyphicon-arrow-up" ng-click="upVoteComment(comment)"></span>
+                {{ comment.upvotes | number }}
+           </div>
+           <div class="commentText">
+               <p class="">{{ comment.body }}</p>
+           </div>
+       </li>
+   </ul>
+   <form class="form-inline" role="form" ng-submit="addComment()">
+       <div class="form-group">
+           <input class="form-control" type="text" placeholder="Your comments" ng-model="body" />
+       </div>
+       <div class="form-group">
+           <button class="btn btn-default" type="submit">Add</button>
+       </div>
+   </form>
+</div>
